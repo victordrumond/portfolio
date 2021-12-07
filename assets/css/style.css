@@ -181,15 +181,14 @@ p {
 /* Nav-toggle button */
 .nav-toggle {
     position: fixed;
-    right: 30%;
-    top: 30%;
+    top: 2rem;
+    right: 3rem;
     border: 0;
     background: none;
-    font-size: 30px;
+    font-size: 36px;
     transition: all 0.4s;
     outline: none !important;
     cursor: pointer;
-    color: red;
 }
 
 
@@ -246,11 +245,11 @@ p {
     font-weight: var(--font-medium);
 }
 
-.info-img-en {
+.about-img-en {
     margin-top: 0.75rem;
 }
 
-.info-img-pt {
+.about-img-pt {
     margin-top: 1.5rem;
 }
 
@@ -536,19 +535,17 @@ p {
     padding: 0;
 }
 
-.contact-item i {
+.contact-icon {
     font-size: 22px;
-    line-height: 1.2;
+    margin-top: 12px;
     margin-right: 10px;
     color: var(--second-color);
 }
 
 .contact-icon:hover {
-    color: var(--first-color);
-    background-color: var(--second-color);
-    cursor: pointer;
-    transition: 0.3s;
-    border: 2px solid var(--second-color);
+    transform: scale(1.2);
+    transition: all 0.5s;
+    color: var(--third-color);
 }
 
 .contact-info h4 {
@@ -619,6 +616,10 @@ p {
         margin-bottom: 50px;
     }
 
+    .change-lang {
+        margin: 20px 0 40px;
+    }
+
     /* Header becomes visible when user clicks on nav-toggle button (JavaScript effect) */
     .show-menu {
         left: 0;
@@ -636,12 +637,24 @@ p {
         margin-top: 0;
         visibility: hidden;
     }
+
+    .about-img-en {
+        margin-top: 2rem;
+    }
+
+    .about-img-pt {
+        margin-top: 3rem;
+    }
 }
 
 /* ---------- Media Query: screen width smaller than 992px ---------- */
 @media screen and (max-width: 991px) {
     body {
         max-width: 991px;
+    }
+
+    .about-img-en, .about-img-pt {
+        width: 400px;
     }
 
     .skills-img {
@@ -651,15 +664,28 @@ p {
     .contact-info {
         margin-top: 2rem;
     }
+
+    .submit-btn {
+        margin-top: 10px;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
 }
 
 /* ---------- Media Query: screen width smaller than 768px ---------- */
 @media screen and (max-width: 767px) {
+    .nav-toggle {
+        top: 1rem;
+        right: 2rem;
+    }
+
     .about-skills {
         margin: 0 1rem;
     }
 
-    .info-img-en, .info-img-pt {
+    .about-img-en, .about-img-pt {
         max-width: 450px;
     }
 }
@@ -696,7 +722,7 @@ p {
     }
 
     .timeline-list li:before {
-        top: 88%;
+        top: 92%;
     }
 
     .timeline-list li:nth-child(4)::before {
@@ -711,7 +737,7 @@ p {
         max-width: 110px;
     }
 
-    .info-img-en, .info-img-pt {
+    .about-img-en, .about-img-pt {
         max-width: 100%;
     }
 }

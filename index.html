@@ -100,7 +100,7 @@
 
                 <!--Basic Info-->
                 <div class="about-info row justify-content-between">
-                    <div class="col-lg-8 col-md-7">
+                    <div class="col-lg-8">
                         <p lang="en" class="info-text">
                             I have a degree in Physics from Federal University of Minas Gerais (Brazil) with visitor period at 
                             University of California, Davis (USA), where I did undergratuate research in computational 
@@ -131,9 +131,9 @@
                             <a href="#projects">abaixo</a>.
                         </p>
                     </div>
-                    <div class="col-lg-4 col-md-5 text-center">
-                        <img lang="en" src="assets/media/img/about-pic.jpg" class="info-img-en img-fluid rounded-circle" alt="">
-                        <img lang="pt" src="assets/media/img/about-pic.jpg" class="info-img-pt img-fluid rounded-circle" alt="">
+                    <div class="col-lg-4 text-center">
+                        <img lang="en" src="assets/media/img/about-pic.jpg" class="about-img-en img-fluid rounded-circle" alt="">
+                        <img lang="pt" src="assets/media/img/about-pic.jpg" class="about-img-pt img-fluid rounded-circle" alt="">
                     </div>
                     <div class="text-center">
                         <a lang="en" href="assets/media/download/CV-victor-en.pdf" target="_blank" download="victor-CV-en" class="download-btn btn">
@@ -260,15 +260,15 @@
                     </div>
                     <div class="col-12 text-center">
                         <p lang="en" class="skills-text">
-                            So far, I've been able to study and practice in greater detail the technologies listed below. <br>
+                            So far, I've been able to study and practice in greater detail the technologies listed below.
                             Emphasis on HTML 5, CSS 3, JavaScript with functionalities from ES6 and later versions, and React v.17.
-                            <br> I also have basic understanding of SASS, Redux and D3.
+                            I also have basic understanding of SASS, Redux and D3.
                         </p>
                         <p lang="pt" class="skills-text">
                             Até o momento, pude estudar e praticar com maiores detalhes as tecnologias listadas abaixo.
-                            <br> Destaque para o HTML 5, CSS 3, JavaScript com funcionalidades do ES6 e versões posteriores, e React
+                            Destaque para o HTML 5, CSS 3, JavaScript com funcionalidades do ES6 e versões posteriores, e React
                             na versão 17.
-                            <br> Também possuo noções básicas de SASS, Redux e D3.
+                            Também possuo noções básicas de SASS, Redux e D3.
                         </p>
                     </div>
                     <div class="col-lg-2 col-sm-3 col-5 text-center" data-tilt data-tilt-max="25" data-tilt-glare data-tilt-max-glare="0.35">
@@ -327,7 +327,7 @@
                             <li data-filter=".filter-react" class="filter-item col-lg-1 col-sm-2 col-3 list-group-item">React</li>
                         </ul>
                         <ul lang="pt" id="portfolio-filters" class="list-group list-group-horizontal row justify-content-center">
-                            <li data-filter="*" class="filter-item list-group-item col-md-1 col-2 active-filter">Todos</li>
+                            <li data-filter="*" class="filter-item list-group-item col-lg-1 col-md-2 col-3 active-filter">Todos</li>
                             <li data-filter=".filter-fcc" class="filter-item col-lg-2 col-md-3 col-sm-4 col-5 list-group-item">freeCodeCamp</li>
                             <li data-filter=".filter-react" class="filter-item col-lg-1 col-sm-2 col-3 list-group-item">React</li>
                         </ul>
@@ -420,22 +420,27 @@
                     <div class="col-lg-5 d-flex" data-aos="fade-up" data-aos-duration="1000">
                         <div class="contact-info d-flex flex-column justify-content-around">
 
-                            <div class="contact-item">
-                                <p lang="en"><i class="fas fa-map-marker-alt fa-fw"></i>Belo Horizonte, Brazil</p>
-                                <p lang="pt"><i class="fas fa-map-marker-alt fa-fw"></i>Belo Horizonte, MG</p>
+                            <div class="contact-item d-flex">
+                                <a><i class="fas fa-map-marker-alt contact-icon"></i></a>
+                                <p lang="en">Belo Horizonte, Brazil</p>
+                                <p lang="pt">Belo Horizonte, MG</p>
                             </div>
-                            <div class="contact-item">
-                                <p lang="en"><i class="fas fa-phone fa-fw"></i>+5531987429814</p>
-                                <p lang="pt"><i class="fas fa-phone fa-fw"></i>(31) 98742-9814</p>
+                            <div class="contact-item d-flex">
+                                <a href="tel:+5531987429814" role="button"><i class="fas fa-phone contact-icon"></i></a>
+                                <p lang="en">+5531987429814</p>
+                                <p lang="pt">(31) 98742-9814</p>
                             </div>
-                            <div class="contact-item">
-                                <p><i class="fas fa-envelope fa-fw"></i>victordrumond@hotmail.com</p>
+                            <div class="contact-item d-flex">
+                                <a href="mailto:victordrumond@hotmail.com" role="button"><i class="fas fa-envelope contact-icon"></i></a>
+                                <p>victordrumond@hotmail.com</p>
                             </div>
-                            <div class="contact-item">
-                                <p><i class="fab fa-github fa-fw"></i>/victordrumond</p>
+                            <div class="contact-item d-flex">
+                                <a href="https://github.com/victordrumond" target="_blank" role="button"><i class="fab fa-github contact-icon"></i></a>
+                                <p>/victordrumond</p>
                             </div>
-                            <div class="contact-item">
-                                <p><i class="fab fa-linkedin-in fa-fw"></i>/victordmds</p>
+                            <div class="contact-item d-flex">
+                                <a href="https://www.linkedin.com/in/victordmds/" target="_blank" role="button"><i class="fab fa-linkedin-in contact-icon"></i></a>
+                                <p>/victordmds</p>
                             </div>
                             <div class="contact-item">
                                 <p lang="en">Thanks for accessing!</p>
