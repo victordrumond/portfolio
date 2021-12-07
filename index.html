@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Victor's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link href="assets/media/img/favicon.png" rel="icon">
+    <!--Font Awesome-->
+    <link href="assets/vendor/font-awesome/css/all.css" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--AOS.js-->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <!--CSS file-->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Header-->
+    <header id="header" class="header container-fluid">
+        <div class="header-container d-flex justify-content-between align-items-center">
+
+            <!--Profile-->
+            <div class="profile-container d-flex align-items-center">
+
+                <!--Info-->
+                <div class="profile-info d-flex flex-column">
+                    <h1 class="profile-name">Victor Drumond</h1>
+                    <h2 class="profile-occupation">Front End Developer</h2>
+                </div>
+
+                <!--Social links-->
+                <div class="profile-links">
+                    <a href="https://www.linkedin.com/in/victordmds/" target="_blank" role="button" class="social-link btn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/victordrumond" target="_blank" role="button" class="social-link btn"><i class="fab fa-github"></i></a>
+                    <a href="mailto:victordrumond@hotmail.com" role="button" class="social-link btn"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+5531987429814" role="button" class="social-link btn"><i class="fas fa-phone"></i></a>
+                </div>
+                
+            </div>
+
+            <!--Select Language button-->
+            <button class="change-lang text-center">
+                <span lang="en">en-US <i class="fas fa-toggle-on"></i></span>
+                <span lang="pt">pt-BR <i class="fas fa-toggle-off"></i></span>
+            </button>
+
+            <!--Nav menu-->
+            <nav class="nav-container">
+                <ul class="nav d-flex justify-content-end align-items-center">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active-link text-center" lang="en">Home</a>
+                        <a href="#home" class="nav-link active-link text-center" lang="pt">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link text-center" lang="en">About</a>
+                        <a href="#about" class="nav-link text-center" lang="pt">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link text-center" lang="en">Projects</a>
+                        <a href="#projects" class="nav-link text-center" lang="pt">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link text-center" lang="en">Contact</a>
+                        <a href="#contact" class="nav-link text-center" lang="pt">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Nav Toggle button (visible only if screen width is less than 1200px)-->
+            <button id="nav-toggle" type="button" class="nav-toggle d-xl-none">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!--Main: Home, About, Projects & Contact-->
+    <main id="main">
+
+        <!--Home-->
+        <section id="home" class="home">
+            <div id="home-container" class="home-container container-fluid d-flex flex-column">
+                
+            </div>
+        </section>
+
+        <!--About-->
+        <section id="about" class="about">
+            <div class="about-container container-fluid">
+
+                <!--Header-->
+                <div class="section-header d-flex flex-column">
+                    <h2 lang="en" class="section-title">About Me</h2>
+                    <h2 lang="pt" class="section-title">Sobre Mim</h2>
+                </div>
+
+                <!--Basic Info-->
+                <div class="about-info row justify-content-between">
+                    <div class="col-lg-8 col-md-7">
+                        <p lang="en" class="info-text">
+                            I have a degree in Physics from Federal University of Minas Gerais (Brazil) with visitor period at 
+                            University of California, Davis (USA), where I did undergratuate research in computational 
+                            condensed matter physics. I have professional experience in teaching, having worked at Colégio 
+                            Santo Antônio as a teaching assistant and substitute teacher in physics and math classes.
+                        </p>
+                        <p lang="pt" class="info-text">
+                            Sou formado em Física pela UFMG, com período sanduíche na University of California, Davis (EUA),
+                            onde desempenhei estágio de pesquisa nas áreas de Física Computacional e Física da Matéria Condensada.
+                            Possuo experiência na área da educação, com passagem pelo Colégio Santo Antônio, onde trabalhei como 
+                            monitor e professor substituto nas disciplinas Física e Matemática.
+                        </p>
+                        <p lang="en" class="info-text">
+                            I learned basic programming in college, mostly during my research project at UC Davis, in which I
+                            used computational methods in C language to study the properties of quantum systems. Since 2021 I 
+                            study Front End Web Development. I completed three of 
+                            <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp's</a> certifications, learning HTML, 
+                            CSS, JavaScript and a few front end frameworks like Bootstrap, jQuery and React. I'm currently 
+                            improving these skills in several projects, which can be seen <a href="#projects">below</a>.
+                        </p>
+                        <p lang="pt" class="info-text">
+                            Adquiri conhecimento em programação na graduação, principalmente durante o estágio de pesquisa, no 
+                            qual utilizei métodos computacionais em linguagem C para estudar propriedades de sistemas
+                            quânticos. Desde 2021 estudo Desenvolvimento Web Front End. Obtive certificação em três 
+                            cursos do <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a>, através dos quais
+                            aprendi HTML, CSS, JavaScript, além de alguns frameworks relacionados, como Bootstrap, jQuery e React.
+                            No momento estou aprimorando essas habilidades em diversos projetos, que podem ser vistos
+                            <a href="#projects">abaixo</a>.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-5 text-center">
+                        <img lang="en" src="assets/media/img/about-pic.jpg" class="info-img-en img-fluid rounded-circle" alt="">
+                        <img lang="pt" src="assets/media/img/about-pic.jpg" class="info-img-pt img-fluid rounded-circle" alt="">
+                    </div>
+                    <div class="text-center">
+                        <a lang="en" href="assets/media/download/CV-victor-en.pdf" target="_blank" download="victor-CV-en" class="download-btn btn">
+                            Download CV
+                            <i class="fas fa-arrow-circle-down"></i>
+                        </a>
+                        <a lang="pt" href="assets/media/download/CV-victor.pdf" target="_blank" download="victor-CV-pt" class="download-btn btn">
+                            Baixar Currículo
+                            <i class="fas fa-arrow-circle-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--Timeline-->
+                <div class="about-timeline row">
+
+                    <div class="col-12 text-center">
+                        <h3 lang="en" class="timeline-title">My Timeline</h3>
+                        <h3 lang="pt" class="timeline-title">Minha Linha do Tempo</h3>
+                    </div>
+                    <div class="col-12 text-center">
+                        <p lang="en" class="timeline-text">Here are the main stages of my trajectory</p>
+                        <p lang="pt" class="timeline-text">Conheça as principais etapas da minha trajetória</p>
+                    </div>
+
+                    <div class="timeline-container">
+
+                        <div class="row">
+                            <div class="col-xl-12">
+                                
+                                <ul class="timeline-list">
+                                   <!--Fact 1-->
+                                    <li>
+                                        <div class="timeline-content" data-aos="fade-right" data-aos-duration="1000">
+                                            <span>2013 - 2017</span>
+                                            <h4 lang="en">Federal University of Minas Gerais</h4>
+                                            <h4 lang="pt">Universidade Federal de Minas Gerais</h4>
+                                            <p lang="en">
+                                                The Physics major gave me a solid foundation in math and logic, having taken courses
+                                                like Calculus, Differential Equations and Complex Variable. It was also when I had
+                                                contact with programming for the first time.
+                                            </p>
+                                            <p lang="pt">
+                                                A graduação em Física me proporcionou uma base sólida em matemática e lógica, através
+                                                de disciplinas como Cálculo, Equações Diferenciais e Variável Complexa. Foi também
+                                                o meu primeiro contato com a programação. 
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <!--Fact 2-->
+                                    <li>
+                                        <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000">
+                                            <span>2015 - 2016</span>
+                                            <h4>University of California, Davis</h4>
+                                            <p lang="en">
+                                                During my undergrad years, I had the opportunity of studying abroad for about a year.
+                                                I was able to improve my English a lot, besides getting to know and living in a
+                                                different culture. It was then that I actually started studying programming, using
+                                                C language in my research project.
+                                            </p>
+                                            <p lang="pt">
+                                                Durante a graduação, tive a oportunidade de estudar no exterior por cerca de um ano.
+                                                Pude melhorar bastante o meu inglês, além de conhecer e viver em uma cultura
+                                                diferente. Comecei a estudar programação de fato nessa época, utilizando linguagem C
+                                                no meu estágio de pesquisa.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <!--Fact 3-->
+                                    <li>
+                                        <div class="timeline-content" data-aos="fade-right" data-aos-duration="1000">
+                                            <span>2016 - 2020</span>
+                                            <h4 lang="en">Teaching</h4>
+                                            <h4 lang="pt">Ensino</h4>
+                                            <p lang="en">
+                                                In the last years of college, I became very involved in teaching. I was already a
+                                                teaching assistant at Colégio Santo Antônio, and I started to work as a substitute
+                                                teacher as well, when necessary. I worked with private tutoring and preparation to
+                                                entrance exams and also as a freelancer in education.
+                                            </p>
+                                            <p lang="pt">
+                                                Nos últimos anos da graduação, fiquei bastante envolvido com o ensino. Já era monitor
+                                                no Colégio Santo Antônio há alguns anos, mas comecei também a substituir professores,
+                                                quando necessário. Trabalhei com aulas particulares de reforço escolar e preparação
+                                                para vestibulares, e prestei serviços como conteudista freelancer.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <!--Fact 4-->
+                                    <li>
+                                        <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000">
+                                            <span lang="en">2021 - Today</span>
+                                            <span lang="pt">2021 - Atualmente</span>
+                                            <h4 lang="en">Web Development</h4>
+                                            <h4 lang="pt">Desenvolvimento</h4>
+                                            <p lang="en">
+                                                Since the beginning of 2021 I started studying programming in my spare time, this 
+                                                time focusing on Front End Web Development. At the moment I'm improving the new 
+                                                skills and technologies I've been learning, mostly React, with the objective of
+                                                working in the area as soon as possible.
+                                            </p>
+                                            <p lang="pt">
+                                                Desde o início de 2021 voltei a estudar programação no meu tempo livre, desta vez
+                                                com foco em Desenvolvimento Front End. No momento estou aperfeiçoando as novas 
+                                                tecnologias que venho aprendendo, principalmente React, com o objetivo de começar a 
+                                                trabalhar na área o mais breve possível.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <!--Skills-->
+                <div class="about-skills row justify-content-around">
+                    <div class="col-12 text-center">
+                        <h3 lang="en" class="skills-title">Skills & Technologies</h3>
+                        <h3 lang="pt" class="skills-title">Skills & Tecnologias</h3>
+                    </div>
+                    <div class="col-12 text-center">
+                        <p lang="en" class="skills-text">
+                            So far, I've been able to study and practice in greater detail the technologies listed below. <br>
+                            Emphasis on HTML 5, CSS 3, JavaScript with functionalities from ES6 and later versions, and React v.17.
+                            <br> I also have basic understanding of SASS, Redux and D3.
+                        </p>
+                        <p lang="pt" class="skills-text">
+                            Até o momento, pude estudar e praticar com maiores detalhes as tecnologias listadas abaixo.
+                            <br> Destaque para o HTML 5, CSS 3, JavaScript com funcionalidades do ES6 e versões posteriores, e React
+                            na versão 17.
+                            <br> Também possuo noções básicas de SASS, Redux e D3.
+                        </p>
+                    </div>
+                    <div class="col-lg-2 col-sm-3 col-5 text-center" data-tilt data-tilt-max="25" data-tilt-glare data-tilt-max-glare="0.35">
+                        <img src="assets/media/img/html-logo.png" class="skills-img img-fluid" alt="">
+                        <p></p>
+                    </div>
+                    <div class="col-lg-2 col-sm-3 col-5 text-center" data-tilt data-tilt-max="25" data-tilt-glare data-tilt-max-glare="0.35">
+                        <img src="assets/media/img/css-logo.png" class="skills-img img-fluid" alt="">
+                        <p></p>
+                    </div>
+                    <div class="col-lg-2 col-sm-3 col-5 text-center" data-tilt data-tilt-max="25" data-tilt-glare data-tilt-max-glare="0.35">
+                        <img src="assets/media/img/javascript-logo.png" class="skills-img img-fluid" alt="">
+                        <p></p>
+                    </div>
+                    <div class="col-lg-2 col-sm-3 col-5 text-center" data-tilt data-tilt-max="25" data-tilt-glare data-tilt-max-glare="0.35">
+                        <img src="assets/media/img/bootstrap-logo.png" class="skills-img img-fluid" alt="">
+                        <p></p>
+                    </div>
+                    <div class="col-lg-2 col-sm-3 col-5 text-center" data-tilt data-tilt-max="25" data-tilt-glare data-tilt-max-glare="0.35">
+                        <img src="assets/media/img/jquery-logo.png" class="skills-img img-fluid" alt="">
+                        <p></p>
+                    </div>
+                    <div class="col-lg-2 col-sm-3 col-5 text-center" data-tilt data-tilt-max="25" data-tilt-glare data-tilt-max-glare="0.35">
+                        <img src="assets/media/img/react-logo.png" class="skills-img img-fluid" alt="">
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--Projects-->
+        <section id="projects" class="projects">
+            <div class="projects-container container-fluid">
+
+                <!--Header-->
+                <div class="section-header d-flex flex-column">
+                    <h2 lang="en" class="section-title">Projects</h2>
+                    <h2 lang="pt" class="section-title">Projetos</h2>
+                    <p lang="en" class="section-description">
+                        Check out some of my main projects so far. For more information, please visit the 
+                        repositories on GitHub.
+                    </p>
+                    <p lang="pt" class="section-description">
+                        Veja abaixo alguns dos meus principais projetos até então. Para mais informações, visite os
+                        repositórios no GitHub.
+                    </p>
+                </div>
+
+                <!--Filters-->
+                <div class="projects-filters text-center">
+                    <div class="filters">
+                        <ul lang="en" id="portfolio-filters" class="list-group list-group-horizontal row justify-content-center">
+                            <li data-filter="*" class="filter-item list-group-item col-md-1 col-2 active-filter">All</li>
+                            <li data-filter=".filter-fcc" class="filter-item col-lg-2 col-md-3 col-sm-4 col-5 list-group-item">freeCodeCamp</li>
+                            <li data-filter=".filter-react" class="filter-item col-lg-1 col-sm-2 col-3 list-group-item">React</li>
+                        </ul>
+                        <ul lang="pt" id="portfolio-filters" class="list-group list-group-horizontal row justify-content-center">
+                            <li data-filter="*" class="filter-item list-group-item col-md-1 col-2 active-filter">Todos</li>
+                            <li data-filter=".filter-fcc" class="filter-item col-lg-2 col-md-3 col-sm-4 col-5 list-group-item">freeCodeCamp</li>
+                            <li data-filter=".filter-react" class="filter-item col-lg-1 col-sm-2 col-3 list-group-item">React</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Projects Grid-->
+                <div class="projects-grid row" data-aos="flip-up" data-aos-duration="1500">
+
+                    <!--Project 1-->
+                    <div class="project-item col-lg-4 col-sm-6">
+                        <div class="project-wrap text-center">
+                            <div class="project-title">
+                                <p lang="en">Responsive Landing Page</p>
+                                <p lang="pt">Landing Page Responsiva</p>
+                            </div>
+                            <img src="assets/media/img/project-1.jpg" class="project-img img-fluid" alt="">
+                            <div class="project-links justify-content-around">
+                                <a lang="en" href="https://victordrumond.github.io/responsive-landing-page/" target="_blank">View</a>
+                                <a lang="pt" href="https://victordrumond.github.io/responsive-landing-page/" target="_blank">Ver</a>
+                                <a href="https://github.com/victordrumond/responsive-landing-page" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Project 2-->
+                    <div class="project-item filter-fcc col-lg-4 col-sm-6">
+                        <div class="project-wrap text-center">
+                            <div class="project-title">
+                                <p>Random Quote Machine</p>
+                            </div>
+                            <img src="assets/media/img/project-2.jpg" class="project-img img-fluid" alt="">
+                            <div class="project-links justify-content-around">
+                                <a lang="en" href="https://victordrumond.github.io/random-quote-machine/" target="_blank">View</a>
+                                <a lang="pt" href="https://victordrumond.github.io/random-quote-machine/" target="_blank">Ver</a>
+                                <a href="https://github.com/victordrumond/random-quote-machine" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--Contact-->
+        <section id="contact" class="contact">
+            <div class="contact-container container-fluid">
+
+                <!--Header-->
+                <div class="section-header d-flex flex-column">
+                    <h2 lang="en" class="section-title">Contact</h2>
+                    <h2 lang="pt" class="section-title">Contato</h2>
+                </div>
+
+                <!--Content-->
+                <div class="contact-grid row justify-content-between">
+
+                    <!--Contact Form-->
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
+                        <form action="https://formsubmit.co/5108b61f5a631b3bc73ee978f4fb89cc" method="POST" class="email-form">
+                            <div class="row">
+                                <div class="form-group col-xl-5 col-lg-6">
+                                    <label lang="en" for="name">Name</label>
+                                    <label lang="pt" for="name">Nome</label>
+                                    <input type="text" name="name" id="name" class="form-control" required/>
+                                </div>
+                                <div class="form-group col-xl-7 col-lg-6">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" required/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label lang="en" for="subject">Subject</label>
+                                <label lang="pt" for="subject">Assunto</label>
+                                <input type="text" name="subject" id="subject" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <label lang="en" for="message">Message</label>
+                                <label lang="pt" for="message">Mensagem</label>
+                                <textarea name="message" id="message" rows="6" class="form-control" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button lang="en" type="submit" class="submit-btn btn">Send<i class="fas fa-paper-plane"></i></button>
+                                <button lang="pt" type="submit" class="submit-btn btn">Enviar<i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--Contact Info-->
+                    <div class="col-lg-5 d-flex" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="contact-info d-flex flex-column justify-content-around">
+
+                            <div class="contact-item">
+                                <p lang="en"><i class="fas fa-map-marker-alt fa-fw"></i>Belo Horizonte, Brazil</p>
+                                <p lang="pt"><i class="fas fa-map-marker-alt fa-fw"></i>Belo Horizonte, MG</p>
+                            </div>
+                            <div class="contact-item">
+                                <p lang="en"><i class="fas fa-phone fa-fw"></i>+5531987429814</p>
+                                <p lang="pt"><i class="fas fa-phone fa-fw"></i>(31) 98742-9814</p>
+                            </div>
+                            <div class="contact-item">
+                                <p><i class="fas fa-envelope fa-fw"></i>victordrumond@hotmail.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <p><i class="fab fa-github fa-fw"></i>/victordrumond</p>
+                            </div>
+                            <div class="contact-item">
+                                <p><i class="fab fa-linkedin-in fa-fw"></i>/victordmds</p>
+                            </div>
+                            <div class="contact-item">
+                                <p lang="en">Thanks for accessing!</p>
+                                <p lang="en">Feel free to use the form or the contact information above to get in touch.</p>
+                                <p lang="pt"> Obrigado pelo acesso!</p>
+                                <p lang="pt">Utilize o formulário ou as informações acima caso queira entrar em contato.</p>
+                            </div>
+
+                        </div>
+                    </div>
+          
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer id="footer" class="footer">
+        <div class="footer-container container-fluid">
+            <p class="footer-credits text-center">
+                &copy; 2021 | Created by Victor Drumond
+            </p>
+        </div>
+    </footer>
+    
+    <!--Bootstrap-->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--jQuery-->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <!--Typed.js-->
+    <script src="assets/vendor/typed-js/typed.min.js"></script>
+    <!--AOS.js-->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <!--Isotope-->
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <!--Vanilla-tilt.js-->
+    <script src="assets/vendor/vanilla-tilt/vanilla-tilt.js"></script>
+    <!--JavaScript file-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
