@@ -1,6 +1,6 @@
 $(document).ready(() => {
     
-    // Elements with [lang="en"] are hidden on first load but user can change the page's language on click //
+    // Elements with [lang="en"] are hidden on first load but user can change page's language on click //
     $('[lang="en"]').hide();
 
     const changeLanguage = () => {
@@ -12,7 +12,7 @@ $(document).ready(() => {
     $(".change-lang").on("click", changeLanguage);
 
     
-    // Header appears when user clicks on the nav-toggle icon //
+    // Header appears when user clicks on the nav-toggle icon (screen width less than 1200px) //
     const showMenu = () => {
 
         $("#nav-toggle").on("click", () => {
@@ -23,7 +23,7 @@ $(document).ready(() => {
     showMenu();
 
 
-    // Header disappears when user clicks on any nav link //
+    // Header disappears when user clicks on any nav link (screen width less than 1200px) //
     const hideMenu = () => {
 
         $(".nav-link").on("click", () => {
@@ -54,7 +54,7 @@ $(document).ready(() => {
     $(window).on("scroll", activeSection);
 
 
-    // Project's title and links will appear/disappear on mouseover //
+    // Project's links will appear/disappear on mouseover //
     const showProjectLinks = () => {
 
         $(".project-item").on("mouseover", function() {
@@ -73,6 +73,7 @@ $(document).ready(() => {
     
     // Isotope will make the grid of projects and filter selectors work together //
     $(window).on("load", function() {
+        
         var portfolioIsotope = $(".projects-grid").isotope({
             itemSelector: ".project-item",
             layoutMode: "fitRows"
@@ -90,7 +91,7 @@ $(document).ready(() => {
     });
 
 
-    // Initialize AOS.js so animations can work //
+    // AOS.js must be initialized so animations can work //
     const aosInit = () => {
         AOS.init({
             disable: function() {

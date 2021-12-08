@@ -189,6 +189,7 @@ p {
     transition: all 0.4s;
     outline: none !important;
     cursor: pointer;
+    color: var(--second-color);
 }
 
 
@@ -679,10 +680,19 @@ p {
     .nav-toggle {
         top: 1rem;
         right: 2rem;
+        font-size: 30px;
+    }
+
+    .change-lang {
+        margin: 0 0 40px;
     }
 
     .about-skills {
-        margin: 0 1rem;
+        margin: 0;
+    }
+
+    .about-skills-text {
+        padding: 0;
     }
 
     .about-img-en, .about-img-pt {
@@ -692,6 +702,12 @@ p {
 
 /* ---------- Media Query: screen width smaller than 576px ---------- */
 @media screen and (max-width: 575px) {
+    .nav-toggle {
+        top: 0.5rem;
+        right: 1.25rem;
+        font-size: 28px;
+    }
+
     .home-container h1 {
         font-size: var(--biggest-font-size);
         left: 8%;
@@ -739,5 +755,9 @@ p {
 
     .about-img-en, .about-img-pt {
         max-width: 100%;
+    }
+
+    .email-form, .contact-info {
+        padding: 20px;
     }
 }
