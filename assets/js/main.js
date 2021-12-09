@@ -15,6 +15,7 @@ $(document).ready(() => {
     // TypeIt.js will fill the Home section //
     new TypeIt("#typed-content-en", {
         speed: 40,
+        waitUntilVisible: false,
     })
     .type("Welcome to my portfolio.")
     .type("<br>", {delay: 1500})
@@ -53,6 +54,7 @@ $(document).ready(() => {
 
     new TypeIt("#typed-content-pt", {
         speed: 40,
+        waitUntilVisible: false,
     })
         .type("Seja bem-vindo ao meu portfólio.")
         .type("<br>", {delay: 1500})
