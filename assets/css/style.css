@@ -190,7 +190,7 @@ p {
     transition: all 0.4s;
     outline: none !important;
     cursor: pointer;
-    color: var(--second-color);
+    color: var(--first-color);
 }
 
 
@@ -608,7 +608,7 @@ p {
 
 /* ---------- Media Query: screen width smaller than 1200px ---------- */
 @media screen and (max-width: 1199px) {
-    
+
     /* Header disappears and nav-toggle button appears */
     .header {
         left: -100%;

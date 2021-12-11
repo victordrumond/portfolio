@@ -93,27 +93,61 @@ $(document).ready(() => {
         .go()
     ;
 
+
+    // NavToggle button and Header must change colors on scroll (screen width less than 1200px) //
+    const adjustColors = () => {
+
+        const white = "#F5F5F5";
+        const black = "#1F1F1F";
+
+        const setColors = (firstColor, secondColor) => {
+
+            $(".nav-toggle").css("color", firstColor);
+            $(".header").css("background-color", firstColor);
+            $(".profile-name").css("color", secondColor);
+            $(".profile-occupation").css("color", secondColor);
+            $(".social-link").css("background-color", secondColor);
+            $(".social-link").css("color", firstColor);
+            $(".social-link").css("border-color", secondColor);
+            $(".change-lang").css("color", secondColor);
+            $(".nav-link").css("color", secondColor);
+        };
+
+        if (screen.width < 1200) {
+
+            setColors(white, black);
+
+            $(window).on("scroll", function() {
+
+                if (this.scrollY > about.offsetTop - 50) {
+                    setColors(black, white);
+                } else {
+                    setColors(white, black);
+                };
+            });
+        };
+    };
+
+    adjustColors();
+
     
     // Header appears when user clicks on the nav-toggle icon (screen width less than 1200px) //
     const showMenu = () => {
 
-        $("#nav-toggle").on("click", () => {
-            $("#header").toggleClass("show-menu");
-        });
+        $("#header").toggleClass("show-menu");
     };
 
-    showMenu();
+    $("#nav-toggle").on("click", showMenu);
 
 
-    // Header disappears when user clicks on any nav link (screen width less than 1200px) //
+    // Header disappears when user clicks on a nav link or on any element from <main> (screen width less than 1200px) //
     const hideMenu = () => {
 
-        $(".nav-link").on("click", () => {
-            $("#header").removeClass("show-menu");
-        });
+        $("#header").removeClass("show-menu");
     };
 
-    hideMenu();
+    $(".nav-link").on("click", hideMenu);
+    $("main:not(#nav-toggle)").on("click", hideMenu);
 
 
     // The active menu link will always be marked with a dot on the nav menu //
