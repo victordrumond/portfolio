@@ -1,18 +1,47 @@
+// This function changes the visibility of elements based on the [lang] attribute //
+const changeLanguage = () => {
+    $('[lang="pt"]').toggle();
+    $('[lang="en"]').toggle();
+};
+
+
+// This function shows the menu //
+const showMenu = () => {
+    $("#header").toggleClass("show-menu");
+};
+
+
+// This function hides the menu //
+const hideMenu = () => {
+    $("#header").removeClass("show-menu");
+};
+
+
+// This function changes the colors of some elements //
+const setColors = (firstColor, secondColor) => {
+
+    $(".nav-toggle").css("color", firstColor);
+    $(".header").css("background-color", firstColor);
+    $(".profile-name").css("color", secondColor);
+    $(".profile-occupation").css("color", secondColor);
+    $(".social-link").css("background-color", secondColor);
+    $(".social-link").css("color", firstColor);
+    $(".social-link").css("border-color", secondColor);
+    $(".change-lang").css("color", secondColor);
+    $(".nav-link").css("color", secondColor);
+};
+
+
+// When document is ready //
 $(document).ready(() => {
     
-    // Elements with [lang="en"] are hidden on first load but user can change page's language on click //
+    // Elements with [lang="en"] are hidden on first load
     $('[lang="en"]').hide();
 
-    const changeLanguage = () => {
-
-        $('[lang="pt"]').toggle();
-        $('[lang="en"]').toggle();
-    };
-
+    // But user can change page's language on click 
     $(".change-lang").on("click", changeLanguage);
 
-
-    // TypeIt.js will fill the Home section //
+    // TypeIt.js will fill the Home section - English version
     new TypeIt("#typed-content-en", {
         speed: 35,
         waitUntilVisible: false,
@@ -53,6 +82,7 @@ $(document).ready(() => {
     .go()
     ;
 
+    // TypeIt.js will fill the Home section - Portuguese version
     new TypeIt("#typed-content-pt", {
         speed: 35,
         waitUntilVisible: false,
@@ -93,66 +123,37 @@ $(document).ready(() => {
         .go()
     ;
 
-
-    // NavToggle button and Header must change colors on scroll (screen width less than 1200px) //
-    const adjustColors = () => {
+    // Some elements change colors on scroll (if screen width is less than 1200px)
+    if (screen.width < 1200) {
 
         const white = "#F5F5F5";
         const black = "#1F1F1F";
+        setColors(white, black);
+        document.documentElement.style.setProperty("--pseudo-element-color", black);
 
-        const setColors = (firstColor, secondColor) => {
+        $(window).on("scroll", function() {
 
-            $(".nav-toggle").css("color", firstColor);
-            $(".header").css("background-color", firstColor);
-            $(".profile-name").css("color", secondColor);
-            $(".profile-occupation").css("color", secondColor);
-            $(".social-link").css("background-color", secondColor);
-            $(".social-link").css("color", firstColor);
-            $(".social-link").css("border-color", secondColor);
-            $(".change-lang").css("color", secondColor);
-            $(".nav-link").css("color", secondColor);
-        };
-
-        if (screen.width < 1200) {
-
-            setColors(white, black);
-
-            $(window).on("scroll", function() {
-
-                if (this.scrollY > about.offsetTop - 50) {
-                    setColors(black, white);
-                } else {
-                    setColors(white, black);
-                };
-            });
-        };
+            if (this.scrollY > about.offsetTop - 50) {
+                setColors(black, white);
+                document.documentElement.style.setProperty("--pseudo-element-color", white);
+            } else {
+                setColors(white, black);
+                document.documentElement.style.setProperty("--pseudo-element-color", black);
+            };
+        });
     };
 
-    adjustColors();
-
-    
-    // Header appears when user clicks on the nav-toggle icon (screen width less than 1200px) //
-    const showMenu = () => {
-
-        $("#header").toggleClass("show-menu");
-    };
-
+    // Header appears when user clicks on the nav-toggle icon (if screen width is less than 1200px)
     $("#nav-toggle").on("click", showMenu);
 
-
-    // Header disappears when user clicks on a nav link or on any element from <main> (screen width less than 1200px) //
-    const hideMenu = () => {
-
-        $("#header").removeClass("show-menu");
-    };
-
+    // Header disappears when user clicks on a nav link OR
+    // on any element from <main> other than the nav-toggle icon (if screen width is less than 1200px)
     $(".nav-link").on("click", hideMenu);
     $("main:not(#nav-toggle)").on("click", hideMenu);
 
+    // The active menu link will always be marked with a dot on the nav menu
+    $(window).on("scroll", function() {
 
-    // The active menu link will always be marked with a dot on the nav menu //
-    const activeSection = () => {
-        
         const scrollY = $(window).scrollTop();
         $("section").each(function() {
 
@@ -165,29 +166,21 @@ $(document).ready(() => {
                 $(".nav-item a[href*=" + $(this).attr("id") + "]").removeClass("active-link");
             };
         });
-    };
+    });
 
-    $(window).on("scroll", activeSection);
+    // Project's links will appear on mouseover
+    $(".project-item").on("mouseover", function() {
+        $(this).find(".project-links").addClass("show-links");
+        $(this).find(".project-img").addClass("hide-img");
+    });
 
+    // And disappear on mouseout
+    $(".project-item").on("mouseout", function() {
+        $(this).find(".project-links").removeClass("show-links");
+        $(this).find(".project-img").removeClass("hide-img");
+    });
 
-    // Project's links will appear/disappear on mouseover //
-    const showProjectLinks = () => {
-
-        $(".project-item").on("mouseover", function() {
-            $(this).find(".project-links").addClass("show-links");
-            $(this).find(".project-img").addClass("hide-img");
-        });
-
-        $(".project-item").on("mouseout", function() {
-            $(this).find(".project-links").removeClass("show-links");
-            $(this).find(".project-img").removeClass("hide-img");
-        });
-    };
-
-    showProjectLinks();
-
-    
-    // Isotope will make the grid of projects and filter selectors work together //
+    // Isotope.js will make the grid of projects and filter selectors work properly
     $(window).on("load", function() {
         
         var portfolioIsotope = $(".projects-grid").isotope({
@@ -206,16 +199,11 @@ $(document).ready(() => {
         });
     });
 
-
-    // AOS.js must be initialized so animations can work //
-    const aosInit = () => {
-        AOS.init({
-            disable: function() {
-                var maxWidth = 1200;
-                return window.innerWidth < maxWidth;
-            }
-        });
-    };
-
-    aosInit();
+    // AOS.js must be initialized so animations can work
+    AOS.init({
+        disable: function() {
+            var maxWidth = 1200;
+            return window.innerWidth < maxWidth;
+        }
+    });
 });

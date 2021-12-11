@@ -11,6 +11,7 @@
     --second-color: #1F1F1F;
     --third-color: #3050B0;
     --fourth-color: #3050B0;
+    --pseudo-element-color: #F5F5F5;
 
     /* Colors Dark Mode */
     --first-color-alt: ;
@@ -175,7 +176,7 @@ p {
     left: 50%;
     width: 5px;
     height: 5px;
-    background-color: var(--first-color);
+    background-color: var(--pseudo-element-color);
     border-radius: 50%;
 }
 
@@ -613,11 +614,20 @@ p {
     .header {
         left: -100%;
         width: 300px;
-        height: 100%;
+        height: 100vh;
     }
 
     .header-container, .profile-container, .nav {
         flex-direction: column;
+    }
+
+    .nav-toggle {
+        top: 0.75rem;
+        right: 1.5rem;
+    }
+
+    .home-container p {
+        margin: 2rem 3rem;
     }
 
     #about, #projects, #contact {
@@ -716,7 +726,7 @@ p {
 
     .home-container p {
         font-size: 18px;
-        margin: 2rem 4rem;
+        margin: 1.5rem 2.5rem;
     }
 
     .about-skills {
@@ -734,6 +744,10 @@ p {
 
 /* ---------- Media Query: screen width smaller than 576px ---------- */
 @media screen and (max-width: 575px) {
+    .header {
+        width: 250px;
+    }
+    
     .nav-toggle {
         top: 0.5rem;
         right: 1.25rem;
