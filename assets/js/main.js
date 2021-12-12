@@ -19,7 +19,6 @@ const hideMenu = () => {
 
 // This function changes the colors of some elements //
 const setColors = (firstColor, secondColor) => {
-
     $(".nav-toggle").css("color", firstColor);
     $(".header").css("background-color", firstColor);
     $(".profile-name").css("color", secondColor);
@@ -146,8 +145,7 @@ $(document).ready(() => {
     // Header appears when user clicks on the nav-toggle icon (if screen width is less than 1200px)
     $("#nav-toggle").on("click", showMenu);
 
-    // Header disappears when user clicks on a nav link OR
-    // on any element from <main> other than the nav-toggle icon (if screen width is less than 1200px)
+    // Header disappears when user selects a nav link or clicks on any element outside header (if screen width is less than 1200px)
     $(".nav-link").on("click", hideMenu);
     $("main:not(#nav-toggle)").on("click", hideMenu);
 
@@ -167,6 +165,16 @@ $(document).ready(() => {
             };
         });
     });
+
+    // Adding Vanilla-tilt.js effects (if screen width is 992px or bigger)
+    if (screen.width > 991) {
+        VanillaTilt.init(document.querySelectorAll(".skills-card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.35
+        });
+    };
 
     // Project's links will appear on mouseover
     $(".project-item").on("mouseover", function() {
@@ -195,7 +203,6 @@ $(document).ready(() => {
             portfolioIsotope.isotope({
                 filter: $(this).data("filter")
             });
-            aosInit();
         });
     });
 

@@ -403,6 +403,12 @@ p {
     margin: 1rem 0 4rem;
 }
 
+.skills-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(6, 1fr);
+}
+
 .skills-img {
     width: 150px;
     background-color: var(--first-color);
@@ -740,6 +746,11 @@ p {
     .about-img-en, .about-img-pt {
         max-width: 450px;
     }
+
+    .skills-container {
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* ---------- Media Query: screen width smaller than 576px ---------- */
@@ -799,11 +810,16 @@ p {
     }
     
     .skills-img {
-        max-width: 110px;
+        max-width: 90px;
     }
 
     .about-img-en, .about-img-pt {
         max-width: 100%;
+    }
+
+    .skills-container {
+        gap: 0.5rem;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .email-form, .contact-info {
