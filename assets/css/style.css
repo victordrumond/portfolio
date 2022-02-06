@@ -263,12 +263,8 @@ p {
     font-weight: var(--font-medium);
 }
 
-.about-img-en {
-    margin-top: 1rem;
-}
-
-.about-img-pt {
-    margin-top: 1.5rem;
+.about-img-en, .about-img-pt {
+    margin-top: 2rem;
 }
 
 .download-btn {
@@ -404,13 +400,13 @@ p {
 }
 
 .skills-container {
+    padding-top: 1.5rem;
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(6, 1fr);
+    gap: 0.75rem;
+    grid-template-columns: repeat(10, 1fr);
 }
 
 .skills-img {
-    width: 150px;
     background-color: var(--first-color);
 }
 
@@ -701,10 +697,6 @@ p {
         width: 400px;
     }
 
-    .skills-img {
-        max-width: 100%;
-    }
-
     .contact-info {
         margin-top: 2rem;
     }
@@ -739,17 +731,13 @@ p {
         margin: 0;
     }
 
-    .about-skills-text {
-        padding: 0;
-    }
-
     .about-img-en, .about-img-pt {
         max-width: 450px;
     }
 
     .skills-container {
-        gap: 1rem;
-        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        grid-template-columns: repeat(7, 1fr);
     }
 }
 
@@ -808,10 +796,6 @@ p {
     .about-skills {
         margin-top: -50px;
     }
-    
-    .skills-img {
-        max-width: 90px;
-    }
 
     .about-img-en, .about-img-pt {
         max-width: 100%;
@@ -819,7 +803,7 @@ p {
 
     .skills-container {
         gap: 0.5rem;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .email-form, .contact-info {
