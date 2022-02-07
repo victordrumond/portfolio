@@ -34,8 +34,8 @@ const setColors = (firstColor, secondColor) => {
 // When document is ready //
 $(document).ready(() => {
     
-    // Elements with [lang="en"] are hidden on first load
-    $('[lang="en"]').hide();
+    // Elements with [lang="pt"] are hidden on first load
+    $('[lang="pt"]').hide();
 
     // But user can change page's language on click 
     $(".change-lang").on("click", changeLanguage);
